@@ -1,0 +1,35 @@
+
+#Lição 14 da AV1 2tri
+a = float(input("Informe o cateto: "))
+b = float(input("Informe o outro cateto: "))
+c = float(input("Informe a hipotenusa: "))
+if (a ** 2) + (b ** 2) == c ** 2:
+#n precisa dos parenteses, e funciona do mesmo jeito.
+    print(f"Os valores digitados formam um triângulo retângulo")
+else:
+    print(f"Os valores digitados não formam um triângulo retângulo")
+# print (f"") = saida que formatar texto, podendo misturar variaveis.
+
+
+
+#Lição 13 da AV1 2tri
+print(f"----Calculadora da Área----")
+print(f"Escolha uma forma para calcular a área: ")
+print(f"q para Quadrado ; c para Círculo ; t para Triângulo")
+forma = str(input())
+if forma == "q" or forma == "Q":
+    lado = float(input("Digite o valor do lado do quadrado: "))
+    areaQuadrado = lado ** 2
+    print(f"lado = {lado}. Área do quadrado = {areaQuadrado}")
+elif forma == "c" or forma == "C":
+    raio = float(input("Digite o valor do raio do círculo: "))
+    areaCirculo = 3.14 * raio * raio
+    print(f"raio = {raio}. Área do Círculo = {areaCirculo}")
+elif forma == "t" or forma == "T":
+    base = float(input("Digite a base do triângulo: "))
+    altura = float(input("Digite a altura do triângulo: "))
+    areaTriangulo = base * altura /2
+    print(f"base = {base}. Área do triângulo = {areaTriangulo}")
+else:
+    print(f"Digite apenas q/c/t")
+#n esqueça dos espaços..
