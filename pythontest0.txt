@@ -1,0 +1,44 @@
+import cmath
+
+def str_para_float(valor):
+    try:
+        if "/" in valor:
+            numerador, denominador = map(float, valor.split("/"))
+            return numerador / denominador
+        return float(valor)
+    except ValueError:
+        print("Erro: entrada inválida.")
+        exit()
+
+def recebe_valores():
+    base = str_para_float(input("Digite a base: "))
+    expoente = str_para_float(input("Digite o expoente: "))
+    potencia(base, expoente)
+
+def potencia(base, expoente):
+    if base < 0:
+        resultado = cmath.exp(expoente * cmath.log(base))
+    else:
+        resultado = base ** expoente
+
+    print(f"Resultado: {resultado}")
+
+recebe_valores()
+
+
+#def verifica_altura(altura):
+#    if(altura >= 1.60):
+#        print(f"Você pode usar o brinquedo.")
+#    else:
+#        print(f"Você não pode usar o brinquedo.")
+
+def verifica_altura():
+    altura = float(input("Digite sua altura em metros: "))
+    
+    if altura >= 1.60:
+        print("Você pode usar o brinquedo.")
+    else:
+        print("Você não pode usar o brinquedo.")
+
+verifica_altura()
+
